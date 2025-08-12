@@ -1,9 +1,19 @@
+from .models import Post
 from django.shortcuts import render, HttpResponse
+import random
 
-# Create your views here.
 
-def test_view(request):
-    return HttpResponse('Добро пожаловать! ')
+def home_page_view(request):
+    return render(request, "base.html")
 
-def html_test(request):
-    return render(request,"base.html")
+
+
+def post_list_view(request):
+    posts = Post.objects.all()
+    return render(request, "posts/post_list.html", context={"posts": posts})
+    
+    
+    
+def post_detail_view(request, post_id):
+    post = Post.objects.get(id=post_id)
+    return render(request, "posts/post_detail.html", context={"post": post})
