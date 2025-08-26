@@ -1,4 +1,4 @@
-#!/home/admin1/Desktop/django_project/venv/bin/python3.12
+#!/home/chupa/Desktop/geeks_projects/OOP-55-2_4month/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
